@@ -12,8 +12,6 @@ class Home extends Component {
     } catch(err) {}
   }
   render() {
-    
-    
     return (
       <div>
         <Row className="justify-content-md-center mt-5">
@@ -31,7 +29,6 @@ class Home extends Component {
         <Row className="justify-content-md-center">
           <Link to="/signup"><Button variant="info">Sign up</Button></Link>
         </Row>
-        {/* <UserLis users={users} match={match} /> */}
       </div>
     );
   }

@@ -78,7 +78,7 @@ function Signup( { account, usertype, firstName, lastName, email, password, titl
         
       </Form>
       <p>Don't have an account ? {usertype === "user" ? (
-        <Link to="/signup">Login</Link>
+        <Link to="/login">Login</Link>
         ) : (
           <Link to="/dashboard/login">Login</Link>
         )}
