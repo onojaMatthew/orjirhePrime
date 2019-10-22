@@ -19,7 +19,7 @@ export const userType = () => {
   }
 
   if ( localStorage.getItem( "token" ) ) {
-    const userType = isAuthenticated().user.userType;
+    const userType = isAuthenticated().user && isAuthenticated().user.userType ? isAuthenticated().user.userType : null;
     return userType;
   }
 }
