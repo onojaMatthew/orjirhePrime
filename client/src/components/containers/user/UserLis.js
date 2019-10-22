@@ -15,7 +15,7 @@ class UserList extends Component {
             <img src={avater} alt="poll" />
           </div>
           <hr />
-          <p className="lead"><strong>Name</strong>{user.firstName} {user.lastName}</p>
+          <p className="lead"><strong>Name</strong>: {user.firstName} {user.lastName}</p>
           <p><strong>Email </strong>: {user.email}</p>
           <p className="view">
             <Link to={`${ match.url }/${ user._id }`} style={{ textDecoration: "none" }}>
@@ -24,7 +24,7 @@ class UserList extends Component {
           </p>
         </div>
       </Col>
-    ) ) : <p>User list empty</p>
+    ) ) : <p>Loading...</p>
     return (
       <div>
         <h3>Hello from users</h3>
