@@ -28,7 +28,7 @@ const PollList = ( { polls, match, } ) => {
       </div>
     </Col>
     )
-  }): <p>Poll List is empt</p>
+  }): <p>Loading...</p>
     
   return (
     <div className="signup">
