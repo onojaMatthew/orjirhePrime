@@ -59,13 +59,13 @@ class SignupForm extends Component{
   render() {
     const { signup, title, account } = this.props;
     const { email, password, firstName, lastName, usertype } = this.state;
-    
-    if ( account.account && account.account.error.length < 1 && usertype === "user" ) {
-      window.location.href = "/user-login";
+    console.log(account, " accoun")
+    if ( account.isSignupSuccess && usertype === "user" ) {
+      window.location.href = "/login";
     } 
     
 
-    if (account.account && account.account.error.length < 1 && usertype === "admin" ) {
+    if ( account.isSignupSuccess && usertype === "admin" ) {
       window.location.href = "/dashboard/login";
     }
     
