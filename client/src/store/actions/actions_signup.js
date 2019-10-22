@@ -58,7 +58,8 @@ export const signup = ( data, userType ) => {
       .then(response => response.json())
       .then( resp => {
         if ( resp.error ) {
-          dispatch(signinFailed(resp.error))
+          dispatch( signinFailed( resp.error ) )
+          return;
         }
         dispatch( signupSuccess( resp ) );
       } )
