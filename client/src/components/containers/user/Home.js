@@ -29,7 +29,7 @@ class Home extends Component {
           </div>
         </Row>
         <Row className="justify-content-md-center">
-          <Link to="/user-signup"><Button variant="info">Sign up</Button></Link>
+          <Link to="/signup"><Button variant="info">Sign up</Button></Link>
         </Row>
         {/* <UserLis users={users} match={match} /> */}
       </div>
