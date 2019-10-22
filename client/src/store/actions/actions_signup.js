@@ -106,6 +106,7 @@ export const signin = ( data, userType ) => {
       .then( resp => {
         if ( resp.error ) {
           dispatch( signinFailed( resp.error ) );
+          return;
         }
         Auth.authenticateUser( JSON.stringify(resp ));
         dispatch( signinSuccess( resp ) );
