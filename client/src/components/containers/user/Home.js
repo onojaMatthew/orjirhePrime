@@ -21,7 +21,7 @@ class Home extends Component {
         </Row>
         <Row className="justify-content-md-center">
           <div>
-            <h4>Here you'll have can vote and like polls</h4>
+            <h4>Here you can vote, like and comment on polls</h4>
             <p>Feel free to sign up and explore our awesome features</p>
             
           </div>
