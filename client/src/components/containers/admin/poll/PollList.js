@@ -11,7 +11,7 @@ class PollList extends Component {
       <Col md={4} key={poll._id}>
         <div className="poll-card">
           <div className="poll-image">
-            <img src={`http://localhost:3030/poll/${ poll._id }`}
+            <img src={`http://localhost:3030/poll/photo/${ poll._id }`}
               onError={( i ) => i.target.src = `${ pollposter }`}
               alt="poll" />
           </div>
