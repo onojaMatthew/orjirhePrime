@@ -8,6 +8,7 @@ import {
   tagPoll,
   createPoll,
   enablePoll,
+  uploadUpdate,
 } from "../../../../store/actions/actions_polls";
 import PollList from './PollList';
 import PollDetails from './PollDetails';
@@ -20,7 +21,7 @@ class Poll extends Component {
   }
   
   render() {
-    const { polls, match, getPoll, enablePoll } = this.props;
+    const { polls, match, getPoll, enablePoll, uploadUpdate } = this.props;
     return (
       <div className="poll">
         
@@ -43,6 +44,7 @@ class Poll extends Component {
                 createPoll={this.props.createPoll}
                 getPoll={getPoll}
                 enablePoll={enablePoll}
+                uploadUpdate={uploadUpdate}
               />
             } />
         </Switch>
@@ -64,7 +66,8 @@ const mapDispatchToProps = ( dispatch ) => {
     disablePoll: ( pollId, userId ) => dispatch( disablePoll( pollId, userId ) ),
     enablePoll: (pollId, userId) => dispatch(enablePoll(pollId, userId)),
     tagPoll: ( data, userId, pollId ) => dispatch( tagPoll( data, userId, pollId ) ),
-    createPoll: ( data, userId, pollId ) => dispatch( createPoll( data, userId, pollId ) )
+    createPoll: ( data, userId, pollId ) => dispatch( createPoll( data, userId, pollId ) ),
+    uploadUpdate: ( photo, userId, pollId ) => dispatch( uploadUpdate( photo, userId, pollId ) ),
   }
 
   return dispatchToProps;

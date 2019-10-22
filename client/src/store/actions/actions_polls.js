@@ -539,10 +539,10 @@ export const uploadUpdateFailed = ( error ) => {
   }
 }
 
-export const uploadUpdate = ( data ) => {
+export const uploadUpdate = ( data, userId, pollId ) => {
   return dispatch => {
     dispatch( uploadUpdateStart() );
-    fetch( `${ MAIN_BASE_URL }/upload/update${ userType() }`, {
+    fetch( `${ MAIN_BASE_URL }/upload/update/${ userType() }/${pollId}`, {
       method: "PUT",
       body: data
     } )

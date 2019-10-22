@@ -87,7 +87,7 @@ class PollDetails extends Component {
 
   renderView = () => {
     const { isShow } = this.state;
-    const { polls, match, tagPoll, createPoll, getPoll } = this.props;
+    const { polls, match, tagPoll, createPoll, getPoll, uploadUpdate } = this.props;
     let selectedPoll = polls && polls.polls && polls.polls.length > 0 ? polls.polls.find( poll => poll._id === match.params.pollId ) : null;
     const pId = selectedPoll ? selectedPoll._id : null;
     const comments = selectedPoll && selectedPoll.comment && selectedPoll.comment.map( comment => (
@@ -106,6 +106,7 @@ class PollDetails extends Component {
           polls={polls}
           getPoll={getPoll}
           match={match}
+          uploadUpdate={uploadUpdate}
         />
       )
     } else {

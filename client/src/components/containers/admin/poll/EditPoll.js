@@ -19,7 +19,7 @@ class EditPoll extends Component {
   }
 
   onSubmit = async ( action ) => {
-    const { tagPoll, createPoll, match } = this.props; // getPoll
+    const { tagPoll, createPoll, match, uploadUpdate, photo } = this.props; // getPoll
     const { name, tag } = this.state; 
     const userId = isAuthenticated().user._id;
     const pollId = match.params.pollId; 
@@ -33,7 +33,7 @@ class EditPoll extends Component {
       } catch(err) {}
     } else if ( action === "upload" ) {
       try {
-        
+        await uploadUpdate(photo, userId, pollId)
       } catch(err) {}
     } else {
       try {
@@ -57,7 +57,6 @@ class EditPoll extends Component {
             <h5>Edit poll tags</h5>
             <Form>
               <Form.Group controlId="formBasicEmail">
-                {/* <Form.Label>Poll name</Form.Label> */}
                 <Form.Control
                   type="text"
                   placeholder="Enter tags"
