@@ -9,6 +9,7 @@ const NewPollForm = ( { onSubmit, onFileChange, handleChange, name, photo, polls
         <Col md={12}>
           <h3>Create new poll</h3>
           {polls && polls.uploadLoading === true ? <p style={{ color: "#00ff00" }}>{uploadMessage}</p> : null}
+          {polls && polls.uploadSuccess === true ? <p style={{ color: "#0000ff" }}>Upload complete! you may continue</p> : null}
           {polls && polls.createPollSuccess === true ? <p style={{ color: "#00ff00" }}>Poll created successfully.</p> : null}
           <p style={{ color: "#007bff"}}>Upload poll photo first before adding the name</p>
           <Form>

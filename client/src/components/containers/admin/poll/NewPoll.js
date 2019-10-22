@@ -23,7 +23,7 @@ class NewPoll extends Component {
     const { name } = this.state;
     
     const pollId = polls && polls[0] ? polls[ 0 ]._id : null;
-    console.log( "you clicked me for submition" )
+    
     const data = { name };
     try {
       await createPoll( data, userId, pollId, token);
