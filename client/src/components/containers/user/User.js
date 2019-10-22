@@ -65,6 +65,7 @@ class User extends Component {
               </Row>
               <h4 className="mb-5">Poll feeds</h4>
               <>
+                
                 {userPolls && userPolls.map( feed => (
                   <>
                   <Row key={feed._id} className="justify-content-md-right mb-3">
