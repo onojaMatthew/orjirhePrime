@@ -15,7 +15,7 @@ module.exports = function () {
 
   winston.add( winston.transports.File, { filename: 'logFile.log' } );
   winston.add( winston.transports.MongoDB, {
-    db: process.env.DB_URL,
+    db: `mongodb://${ process.env.DB_USER }:${ process.env.DB_PASSWORD }@ds237308.mlab.com:37308/${ process.env.DB_NAME }`,
     level: 'info'
   } );
 }
