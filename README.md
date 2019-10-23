@@ -19,6 +19,7 @@ DB_USER=testpoll
 DB_PASSWORD=testpoll1
 
 DB_NAME=testpoll
+JWT_SECRET_DEAL=andvalueisallowed
 
 ## Next:
 Run *__npm install__* to install all the dependencies.
